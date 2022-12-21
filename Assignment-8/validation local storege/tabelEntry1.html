@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table data Entry</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <style>
+            body{
+                background-color: #200B06;
+            }
+            #tableData{
+                color: white;
+            }
+            table th{
+                color: white; 
+            }
+        </style>
+
+</head>
+
+<body>
+
+    <!-- return false -->
+    <form onsubmit=" event.preventDefault();  " id="formSubmit" style="height:fit-content">
+        <div class=" container ">
+            <br>
+            
+
+            <br>
+            <div class="col-lg-7 m-auto d-block shadow bg-white rounded" >
+                <h3 class="text-primary  text-center " style="background-image: linear-gradient(orange,white,green);">REGISTRATION FORM</h3>
+                <div class="bg-light" style="box-shadow: 2px 2px 20px lawngreen;">
+                    <!-- user name -->
+                    <div class="form-group" style="padding: 3px;">
+                        <label for="">User Name:</label>
+                        <input type="text" class="form-control" name="" id="userName" placeholder="Enter User Name">
+                        <span class="text-danger " id="userNameError"></span>
+                    </div>
+
+
+
+                    <!-- email -->
+                    <div class="form-group" style="padding: 3px;">
+                        <label for="">Email:</label>
+                        <input type="email" name="" class="form-control" id="email" placeholder="Enter Email Id">
+                        <span class="text-danger " id="emailerr"></span>
+                    </div>
+
+                    <!-- age -->
+                    <div class="form-group" style="padding: 3px;">
+                        <label for="">Age:</label>
+                        <input type="number" name="" class="form-control" id="age" placeholder="Enter your Age">
+                        <span class="text-danger " id="ageerr"></span>
+                    </div>
+                    <!-- <hr> -->
+
+                    <!-- gender -->
+                    <div class="form-group" style="padding: 3px;">
+                        <label for="">Gender:</label><br>
+                        <input type="radio" name="gen" value="Male" id="male">
+                        <label for="">Male</label>
+                        <input type="radio" name="gen" value="Female" id="female">
+                        <label for="">Female</label><br>
+                        <span class="text-danger " id="gendererr"></span>
+                    </div>
+
+                    <hr>
+
+                    <!-- subject  -->
+                    <label for="">SUBJECT'S STUDIED :</label>
+                    <div class="form-group" style="padding: 3px;">
+
+                        <input type="radio" name="subjectSelected1" value="html" id="sub1">
+                        <label for="" class="mySub">HTML</label>
+                        <input type="radio" name="subjectSelected2" value="css" id="sub2">
+                        <label for="" class="mySub">CSS</label>
+                        <input type="radio" name="subjectSelected3" value="Bootstrap" id="sub3">
+                        <label for="" class="mySub">Bootstrap</label>
+                        <input type="radio" name="subjectSelected4" value="react" id="sub4">
+                        <label for=" " class="mySub">React</label><br>
+                        <span id="subError" class="text-danger "></span>
+                    </div>
+
+                    <!-- states -->
+                    <hr>
+                    <label for="">SELECT STATES </label>
+                    <div class="form-control form-group" style="padding: 3px;">
+
+                        <select name="states" id="states">
+                            <option value="">Select</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="punjab">punjab</option>
+                            <option value="gujrat">gujrat</option>
+                            <option value="Goa">Goa</option>
+                        </select>
+                        <span id="state1Error" class="text-danger "></span>
+
+                    </div>
+
+                    <!-- password -->
+                    <div class="form-group" style="padding: 3px;">
+                        <label for="">Password</label>
+                        <input type="password" name="" class="form-control" id="password" placeholder="Password">
+                        <span class="text-danger " id="passError"></span>
+                    </div>
+
+                    <!-- accept -->
+                    <div class="form-group" style="padding: 3px;">
+                        <input type="checkbox" name="" class="" id="accept">
+                        <label for="">Agree to terms and condition</label>
+                        <span class="text-danger " id="acceptErr"></span>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <input class="btn btn-success m-2" type="submit" id="login" value="submit">
+                        <!-- <input class="btn btn-warning m-2" type="reset" id="clear" value="Clear" /> -->
+                        <input class="btn btn-danger m-2" type="button" value="Delete" onclick="deleteData()" />
+                        <!-- <button class="btn btn- m-2"  value="Delete" onclick="deleteData()" > <a href="http://127.0.0.1:5500/JS%20Assignment/Assignment7/tableEntry/tabelEntry1.html" style="text-decoration: null; color: white;">Delete</a> </button> -->
+
+                        <!-- <button id="login" class="btn btn-success">Submit</button> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <br><br>
+    <div id="tableData">
+        <table class="table" id="personalData">
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>EmailId</th>
+                    <th>Age</th>
+                    <th>Subject</th>
+                    <th>State</th>
+                    <th>Gender</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody class="table-striped " style="color: yellow;">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <script src="./table.js"></script>
+</body>
+
+</html>

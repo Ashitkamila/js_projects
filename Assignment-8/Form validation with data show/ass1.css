@@ -1,0 +1,24 @@
+#cardBackground
+{
+    background-color: saddlebrown;
+    color:whitesmoke;
+}
+#subjectSpan
+{
+    margin-left: 150px;
+}
+#genderSpan
+{
+    margin-left: 150px;
+}
+#termsSpan
+{
+    margin-left: 150px;
+}
+div .last
+{
+    margin-left: 20px;
+}
+#table-col{
+    border: 2px solid black;
+}

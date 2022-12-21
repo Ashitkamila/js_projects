@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assendind Desending Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body {
+            background-color:#006400 ;
+            color: white;
+        
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+      
+<div class="row">
+    <div class="col-md-8">
+        <div class="row mt-5" >
+        <div class="col-md-4">
+            <button onclick="asscending()" class="btn btn-primary" style="border-radius: 20px;box-shadow: 2px 2px 10px red;">Asscending</button>
+        </div>
+        <div class="col-md-4">
+            <button onclick="descending()" class="btn btn-warning text-white" style="border-radius: 20px;box-shadow: 2px 2px 10px blue;"> Descending</button>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control " id="myInput" style="width: 450px; border-radius: 20px;" onkeyup="myFunction()" placeholder="......................Search as per your requirement.......................">
+        </div>
+    </div>
+    </div>
+</div>
+      
+    </div>
+    <p>
+            <div id="users"></div>
+        </p>
+    <p>
+            <small><div id="id" style="text-align: center;"></div></small>
+        </p>
+
+
+
+
+    <script src="./assendingDessendingSearch.js"></script>
+</body>
+
+</html>

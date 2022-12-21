@@ -1,0 +1,38 @@
+.htext{
+    color: #1877F2;
+    font-size: 60px;
+    font-weight: 900px;
+}
+.p1text{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.bbackground{
+    background-color: #EAECF4;
+}
+.loginbox{
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #eaecf4;
+    height: 400px;
+}
+.creatbtn{
+    margin: 0px 100px;
+    height: 50px;
+    width: 200px;
+    padding: auto;
+    background-color: greenyellow;
+}
+.card{
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+#textt{
+    margin-top: 20px;
+    margin-left: 58px;
+    position: relative;
+}
+#togglePassword{
+    margin-top: -27px;
+    margin-left: 390px;
+    position: absolute;
+}
